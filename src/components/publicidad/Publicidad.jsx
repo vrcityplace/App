@@ -5,7 +5,6 @@ import React from "react";
 export default function Publicidad() {
   return (
        <div>
-      <h1>Hola mundo</h1>
       <button type="button" class="btn btn-outline-success">Aceptar</button>
       </div>
  
