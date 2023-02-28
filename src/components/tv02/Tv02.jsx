@@ -6,6 +6,7 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption
+ 
 } from 'reactstrap';
 
 const items = [
@@ -72,14 +73,16 @@ class Tv2 extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} width="100%" height="750px"/>
+          <img src={item.src} alt={item.altText} width="80%"/>
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );
     });
 
-    return (
+    return ( 
+      
       <Carousel
+      
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
@@ -89,9 +92,13 @@ class Tv2 extends Component {
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
       </Carousel>
+      
     );
+    
   }
+  
 }
+
 
 
 export default Tv2;
@@ -111,32 +118,3 @@ export default Tv2;
 
 
 
-
-// import React from "react";
-// import {useState} from 'react'
-// //import axios from "axios";
-// import {useDispatch} from 'react-redux'
-// import { } from "../../C_actions";
-
-
-// export default function SearchBar(){
-// const [search, setSearch] = useState ('')
-// let dispatch = useDispatch()
- 
-// function onSubmit(e){
-//     e.preventDefault();
-// dispatch((search))
-// }
-
-// function onInputChange(e){
-//     e.preventDefault();
-//     setSearch(e.target.value)
-    
-// }
-//     return <>
-//         <form onSubmit={onSubmit}>
-//         <input type="text" onChange={onInputChange} value={search}/>
-//         <input type="submit" value="Buscar" />
-//         </form>
-//     </>
-// }

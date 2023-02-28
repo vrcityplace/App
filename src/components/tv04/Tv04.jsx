@@ -7,6 +7,7 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const items = [
   {
@@ -67,31 +68,50 @@ class Tv04 extends Component {
 
     const slides = items.map((item) => {
       return (
+        
         <CarouselItem
+        
+        
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.src}
-        >
-          <img src={item.src} alt={item.altText} width="100%" height="750px"/>
+        > 
+           <Link to="/"> 
+          <img src={item.src} alt={item.altText} width="100%" height="700px"/> 
+           </Link>
+          
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+         
         </CarouselItem>
+        
+        
       );
+      
     });
 
     return (
       <Carousel
+      
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
       >
+        
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        
       </Carousel>
+      
     );
+     
+    
   }
+ 
+  
 }
+
 
 
 export default Tv04;

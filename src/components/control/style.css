@@ -1,0 +1,22 @@
+.control{
+    background-image: url(/src/img/fondo-principla.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width : 100%;
+    justify-content: center;
+    min-height: 100vmin;
+    position: fixed;
+    display: block;
+    height: 105%;
+    top: -5px;;
+    bottom:-5px;
+    z-index: -1;
+    color: wheat;
+font-family:"open Sans";
+text-align:center;
+text-transform: uppercase;
+text-decoration: wavy;
+
+}
+

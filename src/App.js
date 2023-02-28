@@ -3,8 +3,12 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 
-import Principal from './components/principal/Principal';
-import Principal1 from './components/principal1/Principal1';
+import Principal from './components/control/Principal';
+import Images from './components/principal_images/Images';
+import Video from './components/principal_video/Video';
+import Publicidad from "./components/publicidad/Publicidad";
+
+
 import Tv01 from "./components/tv01/Tv01";
 import Tv02 from "./components/tv02/Tv02";
 import Tv03 from "./components/tv03/Tv03";
@@ -26,7 +30,11 @@ const App = () => (
      <Route exact path="/" component={Principal} />
 
     
-       <Route exact path="/Principal1" component={Principal1}/>
+       <Route exact path="/Images" component={Images}/> 
+       <Route exact path="/Videos" component={Video}/> 
+       <Route exact path="/Publicidad" component={Publicidad}/> 
+
+
        <Route exact path="/Tv01" component={Tv01}/>
        <Route exact path="/Tv02" component={Tv02}/>
        <Route exact path="/Tv03" component={Tv03}/>

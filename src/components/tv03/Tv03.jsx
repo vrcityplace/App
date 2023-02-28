@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Carousel,
   CarouselItem,
@@ -72,7 +73,11 @@ class Tv03 extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} width="100%" height="750px"/>
+      <Link to="/"> 
+          <img src={item.src} alt={item.altText} width="100%" height="700px"/> 
+           </Link>
+
+
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );
